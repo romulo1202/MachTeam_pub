@@ -47,46 +47,6 @@ MachTeam é um aplicativo mobile desenvolvido em Flutter para gerenciamento de e
 - Conta Firebase configurada
 - Dart SDK
 
-## ⚙️ Instalação
-
-### 1. Clone o repositório
-```bash
-git clone https://github.com/seu-usuario/machteam.git
-cd machteam
-```
-
-### 2. Instale as dependências
-```bash
-flutter pub get
-```
-
-### 3. Configure o Firebase
-
-#### Android
-1. Adicione o arquivo `google-services.json` em `android/app/`
-2. Configure o `android/build.gradle.kts` com as dependências do Firebase
-
-#### iOS
-1. Adicione o arquivo `GoogleService-Info.plist` em `ios/Runner/`
-2. Configure o `ios/Podfile` conforme documentação do Firebase
-
-### 4. Configure as regras do Firebase
-
-#### Firestore Rules
-```bash
-firebase deploy --only firestore:rules
-```
-
-#### Storage Rules
-```bash
-firebase deploy --only storage
-```
-
-### 5. Execute o aplicativo
-```bash
-flutter run
-```
-
 ## 📁 Estrutura do Projeto
 
 ```
