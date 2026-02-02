@@ -17,12 +17,10 @@ Observação: o app não armazena nomes de passageiros por padrão — apenas co
 
 **3. Onde os dados são guardados**
 - Perfil de usuário (nome, email, data de nascimento, país, etc.): copiado para o serviço de backend (Firebase/Firestore) para que sua conta exista centralmente e possa ser recuperada em outro dispositivo.
-- Sessão e perfil em cache: uma cópia segura do perfil é guardada localmente em armazenamento seguro do aparelho (Keychain no iOS / Keystore no Android) para permitir login offline.
-- Configurações e missões: salvas localmente no aparelho usando as preferências do sistema (SharedPreferences). Essas informações normalmente não são enviadas para servidores externos.
+- Configurações e missões: salvas localmente no aparelho usando as preferências do sistema. Essas informações normalmente não são enviadas para servidores externos.
 
 **4. Sincronização e acesso à rede**
-- O app usa serviços de autenticação e banco de dados em nuvem (Firebase). Quando você cria conta, faz login ou usa funcionalidades que sincronizam perfil, seus dados de conta são transmitidos para os servidores do provedor de autenticação e banco de dados.
-- O app também ativa persistência offline do banco de dados para melhorar a experiência sem rede.
+- O app usa serviços de autenticação e banco de dados em nuvem (Firebase). Quando você cria conta, faz login ou usa funcionalidades que sincronizam perfil, seus dados de conta são transmitidos para os servidores do provedor de autenticação.
 
 **5. Segurança**
 - Dados sensíveis de sessão e perfil são guardados localmente de forma protegida pelo armazenamento seguro do aparelho.
@@ -30,10 +28,10 @@ Observação: o app não armazena nomes de passageiros por padrão — apenas co
 
 **6. Compartilhamento e terceiros**
 - Não vendemos seus dados.
-- Não usamos serviços de rastreamento ou analytics integrados ao app (nenhum tracker de terceiros ativo). Os únicos serviços externos utilizados são os serviços de autenticação e banco de dados em nuvem necessários para o funcionamento (por exemplo, Firebase).
+- Não usamos serviços de rastreamento ou analytics integrados ao app (nenhum tracker de terceiros ativo). Os únicos serviços externos utilizados são os serviços de autenticação e banco de dados em nuvem necessários para o acesso (por exemplo, Firebase).
 
 **7. Tempo de retenção**
-- Sessão offline: o app mantém uma sessão em cache por até 30 dias a partir do último login para permitir o uso offline. Depois disso, será necessário login online novamente.
+- Sessão offline: o app mantém uma sessão em cache por até 10 dias a partir do último login para permitir o uso offline. Depois disso, será necessário login online novamente.
 - Perfil no servidor: permanece enquanto sua conta existir no serviço de backend (Firestore), até que a conta seja excluída.
 
 **8. Seus direitos e opções**
@@ -50,5 +48,3 @@ Podemos atualizar esta política para refletir mudanças no app. Quando houver a
 **11. Perguntas e contato**
 Se tiver dúvidas sobre como seus dados são usados ou se quiser pedir a remoção, procure o canal de suporte indicado na página do aplicativo na loja onde baixou o LM Mission.
 
----
-Este resumo foi gerado a partir das funcionalidades do app (autenticação com conta, uso de Firestore, armazenamento seguro local, SharedPreferences para configurações e missões). Se desejar, posso adaptar o texto incluindo detalhes de contato ou cláusulas legais específicas para sua organização.
